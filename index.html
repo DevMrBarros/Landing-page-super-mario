@@ -21,10 +21,36 @@
         <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
             ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia!</p>
             <p>Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
-        <button>Fale conosco</button>
+        <button onclick="cliqueiNoBotao()">Fale conosco</button>
     </div>
 
     <img src="mario.png" alt="logo mario e luigi" class="imagem-mario-luigi"> 
+
+    <form action="" class="fale-conosco">
+        <h2>Fale Conosco</h2>
+        <input type="text" placeholder="Seu nome">
+        <input type="tel" placeholder="Seu telefone">
+        <textarea placeholder="Digite seu problema aqui"></textarea>
+        <button onclick="removerFormulario()">Enviar formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
 </body>
+
+<script>
+    let formulario = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+
+    function cliqueiNoBotao(){
+        formulario.style.left = "500px"
+        mascara.style.visibility = "visible"
+    }
+
+    function removerFormulario(){
+        formulario.style.left = "-320px"
+        mascara.style.visibility = "hidden"
+    }
+</script>
 
 </html>
